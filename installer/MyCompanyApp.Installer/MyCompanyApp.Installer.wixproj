@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Package</OutputType>
+    <Platform>x64</Platform>
   </PropertyGroup>
 
 </Project>
