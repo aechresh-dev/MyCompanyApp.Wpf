@@ -25,11 +25,10 @@ Scope="perMachine">
 
 <ComponentGroup Id="ApplicationShortcuts">
 
-<Component Id="DesktopShortcutComponent" Guid="*">
+<Component Id="DesktopShortcutComponent" Guid="*" Directory="DesktopFolder">
 
 <Shortcut
 Id="DesktopShortcut"
-Directory="DesktopFolder"
 Name="MyCompanyApp"
 Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
 WorkingDirectory="INSTALLFOLDER"/>
@@ -44,11 +43,10 @@ KeyPath="yes"/>
 
 </Component>
 
-<Component Id="StartMenuShortcutComponent" Guid="*">
+<Component Id="StartMenuShortcutComponent" Guid="*" Directory="ApplicationProgramsFolder">
 
 <Shortcut
 Id="StartMenuShortcut"
-Directory="ApplicationProgramsFolder"
 Name="MyCompanyApp"
 Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
 WorkingDirectory="INSTALLFOLDER"/>
