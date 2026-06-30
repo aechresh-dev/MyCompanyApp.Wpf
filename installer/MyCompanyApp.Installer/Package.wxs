@@ -6,32 +6,23 @@
       Name="MyCompanyApp"
       Manufacturer="MyCompany"
       Version="1.0.0"
-      UpgradeCode="2F9C1A0A-8C0A-4E34-8C0F-111111111111">
+      UpgradeCode="2F9C1A0A-8C0A-4E34-8C0F-111111111111"
+      Language="1033"
+      InstallerVersion="500"
+      Compressed="yes"
+      Scope="perMachine">
 
+    <MajorUpgrade DowngradeErrorMessage="A newer version is already installed." />
     <MediaTemplate />
 
     <StandardDirectory Id="ProgramFiles64Folder">
-      <Directory Id="INSTALLFOLDER" Name="MyCompanyApp"/>
+      <Directory Id="INSTALLFOLDER" Name="MyCompanyApp" />
     </StandardDirectory>
 
     <Feature Id="MainFeature" Title="MyCompanyApp" Level="1">
-      <ComponentGroupRef Id="ProductComponents"/>
+      <ComponentGroupRef Id="HarvestedComponents" />
     </Feature>
 
   </Package>
-
-  <Fragment>
-
-    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-
-      <Component Guid="*" Bitness="always64">
-
-        <File Source="..\..\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Wpf.exe"/>
-
-      </Component>
-
-    </ComponentGroup>
-
-  </Fragment>
 
 </Wix>

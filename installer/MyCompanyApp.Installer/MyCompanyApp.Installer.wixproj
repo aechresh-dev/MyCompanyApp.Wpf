@@ -3,6 +3,13 @@
   <PropertyGroup>
     <OutputType>Package</OutputType>
     <Platform>x64</Platform>
+    <InstallerPlatform>x64</InstallerPlatform>
+    <EnableDefaultItems>false</EnableDefaultItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Package.wxs" />
+    <Compile Include="HarvestedFiles.wxs" />
+  </ItemGroup>
 
 </Project>
