@@ -1,0 +1,25 @@
+﻿<UserControl x:Class=""MyCompanyApp.Wpf.Views.UsersView""
+xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
+xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml"">
+
+<Grid Margin=""20"">
+<Grid.RowDefinitions>
+<RowDefinition Height=""Auto""/>
+<RowDefinition Height=""*""/>
+</Grid.RowDefinitions>
+
+<StackPanel Orientation=""Horizontal"" Margin=""0 0 0 10"">
+<TextBox Width=""200"" Text=""{Binding Username, UpdateSourceTrigger=PropertyChanged}""/>
+<Button Content=""Add User"" Command=""{Binding AddUserCommand}"" Margin=""10 0 0 0""/>
+</StackPanel>
+
+<ListBox Grid.Row=""1"" ItemsSource=""{Binding Users}"">
+<ListBox.ItemTemplate>
+<DataTemplate>
+<TextBlock Text=""{Binding Username}""/>
+</DataTemplate>
+</ListBox.ItemTemplate>
+</ListBox>
+
+</Grid>
+</UserControl>

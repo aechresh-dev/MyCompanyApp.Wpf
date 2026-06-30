@@ -1,0 +1,3 @@
+﻿@echo off
+echo Updating Application...
+powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "%~dp0Run-OfflineUpdate-GUI.ps1"

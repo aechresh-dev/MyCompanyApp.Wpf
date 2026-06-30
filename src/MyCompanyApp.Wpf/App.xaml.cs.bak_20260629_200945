@@ -1,0 +1,166 @@
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+namespace MyCompanyApp.Wpf;
+
+public partial class App : System.Windows.Application
+{
+    public static IHost? Host { get; private set; }
+
+    private static readonly string LogDirectory =
+        Path.Combine(AppContext.BaseDirectory, "logs");
+
+    private static readonly string LogFilePath =
+        Path.Combine(LogDirectory, "startup-runtime.log");
+
+    public App()
+    {
+        DispatcherUnhandledException += OnDispatcherUnhandledException;
+        AppDomain.CurrentDomain.UnhandledException += OnCurrentDomainUnhandledException;
+        TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
+        Log("App constructor called");
+    }
+
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        try
+        {
+            base.OnStartup(e);
+
+            EnsureLogDirectory();
+            Log("========================================");
+            Log("Application startup begin");
+            Log("BaseDirectory = " + AppContext.BaseDirectory);
+            Log("Args = " + string.Join(" | ", e.Args));
+
+            ShutdownMode = ShutdownMode.OnMainWindowClose;
+            Log("ShutdownMode set to OnMainWindowClose");
+
+            Host = Microsoft.Extensions.Hosting.Host
+                .CreateDefaultBuilder()
+                .ConfigureServices((context, services) =>
+                {
+                    Log("Configuring application services...");
+                    MyCompanyApp.Wpf.Startup.ServiceCollectionExtensions.AddApplicationServices(
+                        services,
+                        context.Configuration);
+                })
+                .Build();
+
+            Log("Host built successfully");
+
+            Host.Start();
+            Log("Host started successfully");
+
+            var mainWindow = Host.Services.GetRequiredService<MainWindow>();
+            Log("MainWindow resolved successfully");
+
+            mainWindow.SourceInitialized += (_, __) => Log("MainWindow.SourceInitialized");
+            mainWindow.ContentRendered += (_, __) => Log("MainWindow.ContentRendered");
+            mainWindow.Loaded += (_, __) => Log("MainWindow.Loaded");
+            mainWindow.Activated += (_, __) => Log("MainWindow.Activated");
+            mainWindow.Deactivated += (_, __) => Log("MainWindow.Deactivated");
+            mainWindow.Closing += (_, __) => Log("MainWindow.Closing");
+            mainWindow.Closed += (_, __) => Log("MainWindow.Closed");
+
+            MainWindow = mainWindow;
+            Log("MainWindow assigned to Application.MainWindow");
+
+            mainWindow.Show();
+            Log("MainWindow.Show called");
+
+            Log("Application startup completed");
+        }
+        catch (Exception ex)
+        {
+            LogException("Startup exception", ex);
+
+            MessageBox.Show(
+                ex.ToString() + Environment.NewLine + Environment.NewLine + "Log File: " + LogFilePath,
+                "Startup Error",
+                MessageBoxButton.OK,
+                MessageBoxImage.Error);
+
+            Shutdown(-1);
+        }
+    }
+
+    protected override void OnExit(ExitEventArgs e)
+    {
+        try
+        {
+            Log("Application exiting. ExitCode = " + e.ApplicationExitCode);
+
+            if (Host is not null)
+            {
+                Log("Stopping host...");
+                Host.StopAsync(TimeSpan.FromSeconds(5)).GetAwaiter().GetResult();
+                Host.Dispose();
+                Log("Host stopped and disposed");
+            }
+        }
+        catch (Exception ex)
+        {
+            LogException("OnExit exception", ex);
+        }
+        finally
+        {
+            base.OnExit(e);
+        }
+    }
+
+    private void OnDispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+    {
+        LogException("DispatcherUnhandledException", e.Exception);
+
+        MessageBox.Show(
+            e.Exception.ToString() + Environment.NewLine + Environment.NewLine + "Log File: " + LogFilePath,
+            "Unhandled UI Exception",
+            MessageBoxButton.OK,
+            MessageBoxImage.Error);
+
+        e.Handled = true;
+        Shutdown(-2);
+    }
+
+    private void OnCurrentDomainUnhandledException(object? sender, UnhandledExceptionEventArgs e)
+    {
+        var ex = e.ExceptionObject as Exception
+                 ?? new Exception("Unknown AppDomain unhandled exception object");
+
+        LogException("AppDomain.CurrentDomain.UnhandledException", ex);
+    }
+
+    private void OnUnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e)
+    {
+        LogException("TaskScheduler.UnobservedTaskException", e.Exception);
+        e.SetObserved();
+    }
+
+    private static void EnsureLogDirectory()
+    {
+        if (!Directory.Exists(LogDirectory))
+        {
+            Directory.CreateDirectory(LogDirectory);
+        }
+    }
+
+    private static void Log(string message)
+    {
+        EnsureLogDirectory();
+        File.AppendAllText(
+            LogFilePath,
+            $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] {message}{Environment.NewLine}");
+    }
+
+    private static void LogException(string title, Exception ex)
+    {
+        Log(title);
+        Log(ex.ToString());
+    }
+}
+

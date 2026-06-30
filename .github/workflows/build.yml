@@ -1,0 +1,43 @@
+﻿name: Build and Test
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+    
+    - name: Restore dependencies
+      run: dotnet restore MyCompanyApp.sln
+    
+    - name: Build
+      run: dotnet build MyCompanyApp.sln --no-restore --configuration Release
+    
+    - name: Run tests
+      run: |
+        cd tests
+        for dir in */; do
+          cd "$dir"
+          dotnet test --no-build --verbosity normal
+          cd ..
+        done
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: |
+          **/bin/Release/**/*.dll
+          **/bin/Release/**/*.exe
+        retention-days: 7

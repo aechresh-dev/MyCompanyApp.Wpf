@@ -1,0 +1,8 @@
+﻿MyCompanyApp Offline Updater Bootstrapper
+
+This repository is configured for offline update workflow:
+- Build
+- Publish
+- Create update package
+- Install package locally
+- No internet access required

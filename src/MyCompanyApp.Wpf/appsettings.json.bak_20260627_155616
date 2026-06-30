@@ -1,0 +1,25 @@
+{
+  "Application": {
+    "Name": "MyCompanyApp",
+    "Environment": "Production",
+    "Version": "0.1.0"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "System": "Warning"
+    }
+  },
+  "Database": {
+    "Provider": "SqlServer",
+    "ConnectionString": "Server=.;Database=MyCompanyAppDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  },
+  "Features": {
+    "EnableDashboard": true,
+    "EnableUsersModule": true,
+    "EnableLeaveModule": true,
+    "EnableReminders": true,
+    "EnablePluginSystem": false
+  }
+}

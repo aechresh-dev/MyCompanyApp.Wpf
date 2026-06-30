@@ -1,0 +1,9 @@
+<Window x:Class="MyCompanyApp.Modules.Dashboard.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MyCompanyApp - Dashboard" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Text="Welcome to Enterprise Dashboard" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Foreground="Gray"/>
+    </Grid>
+</Window>

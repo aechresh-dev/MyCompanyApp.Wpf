@@ -1,0 +1,48 @@
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using MyCompanyApp.Modules.Dashboard.Views;
+using MyCompanyApp.Modules.Leave.Views;
+using MyCompanyApp.Modules.Users.Views;
+using MyCompanyApp.Platform.UI.Navigation;
+using MyCompanyApp.Wpf.Shell;
+namespace MyCompanyApp.Wpf.Startup;
+
+public static class ServiceCollectionExtensions
+{
+    public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
+    {
+                services.AddSingleton<NavigationStore>();
+        services.AddSingleton<MyCompanyApp.Wpf.Navigation.NavigationStore>();
+        services.AddSingleton<MyCompanyApp.Wpf.Navigation.INavigationService, MyCompanyApp.Wpf.Navigation.NavigationService>();
+        services.AddSingleton<NavigationRouteRegistry>();
+        services.AddSingleton<INavigationService, NavigationService>();
+
+        services.AddSingleton<ShellViewModel>();
+
+        services.AddTransient<DashboardView>();
+        services.AddTransient<UsersView>();
+        services.AddTransient<LeaveView>();
+
+        services.AddSingleton<MainWindow>(provider =>
+        {
+            var registry = provider.GetRequiredService<NavigationRouteRegistry>();
+            RegisterRoutes(registry);
+
+            var window = new MainWindow(provider.GetRequiredService<ShellViewModel>());
+            return window;
+        });
+
+        return services;
+    }
+
+    private static void RegisterRoutes(NavigationRouteRegistry registry)
+    {
+        registry.Register<DashboardView>("dashboard");
+        registry.Register<UsersView>("users");
+        registry.Register<LeaveView>("leave");
+    }
+}
+
+
+
+

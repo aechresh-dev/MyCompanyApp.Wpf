@@ -1,0 +1,39 @@
+﻿PRAGMA foreign_keys = ON;
+
+CREATE TABLE IF NOT EXISTS Departments(
+Id INTEGER PRIMARY KEY AUTOINCREMENT,
+Name TEXT NOT NULL,
+CreatedPersianDate TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Employees(
+Id INTEGER PRIMARY KEY AUTOINCREMENT,
+PersonnelCode TEXT UNIQUE,
+FirstName TEXT,
+LastName TEXT,
+DepartmentId INTEGER,
+CreatedPersianDate TEXT
+);
+
+CREATE TABLE IF NOT EXISTS AttendanceRecords(
+Id INTEGER PRIMARY KEY AUTOINCREMENT,
+EmployeeId INTEGER,
+WorkPersianDate TEXT,
+CheckInPersianTime TEXT,
+CheckOutPersianTime TEXT
+);
+
+CREATE TABLE IF NOT EXISTS LeaveRequests(
+Id INTEGER PRIMARY KEY AUTOINCREMENT,
+EmployeeId INTEGER,
+FromPersianDate TEXT,
+ToPersianDate TEXT,
+Status INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS Shifts(
+Id INTEGER PRIMARY KEY AUTOINCREMENT,
+Name TEXT,
+StartTime TEXT,
+EndTime TEXT
+);

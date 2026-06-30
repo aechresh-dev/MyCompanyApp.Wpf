@@ -1,0 +1,104 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260608221026
+Username: DESKTOP-7MMQ2D6\God_Parents
+RunAs User: DESKTOP-7MMQ2D6\God_Parents
+Configuration Name: 
+Machine: DESKTOP-7MMQ2D6 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5524
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\MVVM_Structure_20260608-221026.txt
+شروع تکمیل ساختار MVVM | 06/08/2026 22:10:26
+مسیر WPF: G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf
+
+=== ایجاد پوشه‌های MVVM ===
+[Structure] [Success] پوشه ایجاد شد: Models
+[Structure] [Info] پوشه موجود است: ViewModels
+[Structure] [Info] پوشه موجود است: Views
+[Structure] [Info] پوشه موجود است: Services
+[Structure] [Info] پوشه موجود است: Helpers
+[Structure] [Success] پوشه ایجاد شد: Converters
+[Structure] [Success] پوشه ایجاد شد: Controls
+
+=== ایجاد فایل‌های پایه ===
+[Structure] [Action] فایل ایجاد شد: Models\ObservableObject.cs
+[Structure] [Action] فایل ایجاد شد: ViewModels\ViewModelBase.cs
+[Structure] [Action] فایل ایجاد شد: Views\BaseWindow.cs
+[Structure] [Action] فایل ایجاد شد: Services\IDialogService.cs
+[Structure] [Action] فایل ایجاد شد: Helpers\ValidationHelper.cs
+[Structure] [Action] فایل ایجاد شد: Converters\BooleanConverters.cs
+[Structure] [Action] فایل ایجاد شد: Controls\IconButton.cs
+
+=== به‌روزرسانی فایل csproj ===
+
+=== ایجاد نمونه‌های کاربردی ===
+[Structure] [Action] فایل نمونه ایجاد شد: ViewModels\SampleViewModel.cs
+[Structure] [Action] فایل نمونه ایجاد شد: Views\SampleView.xaml
+[Structure] [Action] فایل نمونه ایجاد شد: Views\SampleView.xaml.cs
+
+=== ایجاد فایل‌های Resource ===
+[Structure] [Success] پوشه ایجاد شد: Styles
+[Structure] [Action] فایل ایجاد شد: Styles\Styles.xaml
+
+=== به‌روزرسانی App.xaml ===
+[Structure] [Success] App.xaml به‌روزرسانی شد (اضافه شدن Styles)
+
+=== ایجاد فایل‌های کمکی اضافی ===
+[Structure] [Action] فایل ایجاد شد: Converters\StringToBooleanConverter.cs
+[Structure] [Action] فایل ایجاد شد: Helpers\Constants.cs
+
+=== خلاصه نهایی ساختار ایجاد شده ===
+
+📁 پوشه‌های ایجاد‌شده:
+  • Controls
+  • Converters
+  • Helpers
+  • Models
+  • Services
+  • Styles
+  • ViewModels
+  • Views
+
+📄 فایل‌های ایجاد‌شده:
+  • App.xaml
+  • Controls\IconButton.cs
+  • Converters\BooleanConverters.cs
+  • Converters\StringToBooleanConverter.cs
+  • Helpers\Constants.cs
+  • Helpers\ValidationHelper.cs
+  • Models\ObservableObject.cs
+  • Services\IDialogService.cs
+  • Styles\Styles.xaml
+  • ViewModels\MainWindowViewModel.cs
+  • ViewModels\SampleViewModel.cs
+  • ViewModels\ViewModelBase.cs
+  • Views\BaseWindow.cs
+  • Views\MainWindow.xaml
+  • Views\MainWindow.xaml.cs
+  • Views\SampleView.xaml
+  • Views\SampleView.xaml.cs
+
+✅ ساختار MVVM با موفقیت تکمیل شد!
+📊 آمار:
+  • پوشه‌ها: 8
+  • فایل‌های C#: Microsoft.PowerShell.Commands.GenericMeasureInfo.Count
+  • فایل‌های XAML: Microsoft.PowerShell.Commands.GenericMeasureInfo.Count
+
+🔧 اقدامات بعدی:
+  1. پروژه را در Visual Studio باز کنید
+  2. Build کنید تا خطاهای احتمالی رفع شوند
+  3. از SampleViewModel و SampleView به عنوان الگو استفاده کنید
+  4. فایل‌های .bak را در صورت نیاز حذف کنید
+**********************
+Windows PowerShell transcript end
+End time: 20260608221026
+**********************

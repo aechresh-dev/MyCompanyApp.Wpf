@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>MyCompanyApp.Wpf</RootNamespace>
+    <AssemblyName>MyCompanyApp.Wpf</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Infrastructure\MyCompanyApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Persistence\MyCompanyApp.Persistence.csproj" />
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+    <ProjectReference Include="..\Platform\MyCompanyApp.Platform.Auth\MyCompanyApp.Platform.Auth.csproj" />
+    <ProjectReference Include="..\Platform\MyCompanyApp.Platform.UI\MyCompanyApp.Platform.UI.csproj" />
+    <ProjectReference Include="..\Modules\MyCompanyApp.Modules.Dashboard\MyCompanyApp.Modules.Dashboard.csproj" />
+    <ProjectReference Include="..\Modules\MyCompanyApp.Modules.Users\MyCompanyApp.Modules.Users.csproj" />
+    <ProjectReference Include="..\Modules\MyCompanyApp.Modules.Leave\MyCompanyApp.Modules.Leave.csproj" />
+  </ItemGroup>
+</Project>

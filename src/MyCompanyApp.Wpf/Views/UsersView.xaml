@@ -1,0 +1,80 @@
+<UserControl x:Class="MyCompanyApp.Wpf.Views.UsersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#F9FAFB">
+    <Grid Margin="28">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <TextBlock Text="Users"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Foreground="#111827"/>
+                <TextBlock Text="User management module"
+                           Margin="0,6,0,0"
+                           FontSize="14"
+                           Foreground="#6B7280"/>
+            </StackPanel>
+
+            <Button DockPanel.Dock="Right"
+                    Width="128"
+                    Height="36"
+                    Content="New User"
+                    Background="#2563EB"
+                    Foreground="White"
+                    BorderThickness="0"/>
+        </DockPanel>
+
+        <Border Grid.Row="2"
+                Background="White"
+                BorderBrush="#E5E7EB"
+                BorderThickness="1"
+                CornerRadius="8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Background="#F3F4F6"
+                        CornerRadius="8,8,0,0"
+                        BorderBrush="#E5E7EB"
+                        BorderThickness="0,0,0,1">
+                    <Grid Margin="16,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Name"
+                                   VerticalAlignment="Center"
+                                   FontWeight="SemiBold"
+                                   Foreground="#374151"/>
+                        <TextBlock Grid.Column="1"
+                                   Text="Role"
+                                   VerticalAlignment="Center"
+                                   FontWeight="SemiBold"
+                                   Foreground="#374151"/>
+                        <TextBlock Grid.Column="2"
+                                   Text="Status"
+                                   VerticalAlignment="Center"
+                                   FontWeight="SemiBold"
+                                   Foreground="#374151"/>
+                    </Grid>
+                </Border>
+
+                <TextBlock Grid.Row="1"
+                           Text="Users module is ready for data binding."
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="#6B7280"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

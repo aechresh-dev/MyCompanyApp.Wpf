@@ -1,0 +1,69 @@
+<Window x:Class="MyCompanyApp.Wpf.AppShell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MyCompanyApp"
+        Width="1280"
+        Height="760"
+        MinWidth="980"
+        MinHeight="620"
+        WindowStartupLocation="CenterScreen"
+        Background="#F9FAFB">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="248"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                Background="#111827"
+                BorderBrush="#1F2937"
+                BorderThickness="0,0,1,0">
+            <DockPanel LastChildFill="True">
+                <StackPanel DockPanel.Dock="Top"
+                            Margin="20,24,20,20">
+                    <TextBlock Text="MyCompanyApp"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="White"/>
+                    <TextBlock Text="Company management"
+                               Margin="0,6,0,0"
+                               FontSize="12"
+                               Foreground="#9CA3AF"/>
+                </StackPanel>
+
+                <StackPanel Margin="14,96,14,14">
+                    <Button x:Name="DashboardButton"
+                            Height="42"
+                            Margin="0,0,0,8"
+                            Content="Dashboard"
+                            Click="DashboardButton_Click"
+                            Background="#2563EB"
+                            Foreground="White"
+                            BorderThickness="0"/>
+
+                    <Button x:Name="UsersButton"
+                            Height="42"
+                            Margin="0,0,0,8"
+                            Content="Users"
+                            Click="UsersButton_Click"
+                            Background="#1F2937"
+                            Foreground="#E5E7EB"
+                            BorderThickness="0"/>
+
+                    <Button x:Name="LeaveButton"
+                            Height="42"
+                            Content="Leave"
+                            Click="LeaveButton_Click"
+                            Background="#1F2937"
+                            Foreground="#E5E7EB"
+                            BorderThickness="0"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <Border Grid.Column="1"
+                Background="#F9FAFB">
+            <ContentControl x:Name="MainContent"/>
+        </Border>
+    </Grid>
+</Window>

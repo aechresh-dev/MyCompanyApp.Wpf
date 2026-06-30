@@ -1,0 +1,210 @@
+﻿--- START CONTENT: src\MyCompanyApp.Application\MyCompanyApp.Application.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+</Project>
+--- END CONTENT: src\MyCompanyApp.Application\MyCompanyApp.Application.csproj ---
+
+--- START CONTENT: src\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+</Project>
+--- END CONTENT: src\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj ---
+
+--- START CONTENT: src\MyCompanyApp.Infrastructure\MyCompanyApp.Infrastructure.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.8" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="10.0.0" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+</Project>
+--- END CONTENT: src\MyCompanyApp.Infrastructure\MyCompanyApp.Infrastructure.csproj ---
+
+--- START CONTENT: src\MyCompanyApp.Persistence\MyCompanyApp.Persistence.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.8" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+</Project>
+--- END CONTENT: src\MyCompanyApp.Persistence\MyCompanyApp.Persistence.csproj ---
+
+--- START CONTENT: src\MyCompanyApp.Reporting\MyCompanyApp.Reporting.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.5.1" />
+    <PackageReference Include="QuestPDF" Version="2026.5.0" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+</Project>
+--- END CONTENT: src\MyCompanyApp.Reporting\MyCompanyApp.Reporting.csproj ---
+
+--- START CONTENT: TestProject\TestProject.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+</Project>
+--- END CONTENT: TestProject\TestProject.csproj ---
+
+--- START CONTENT: tests\MyCompanyApp.Application.Tests\MyCompanyApp.Application.Tests.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.5" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+  </ItemGroup>
+</Project>
+--- END CONTENT: tests\MyCompanyApp.Application.Tests\MyCompanyApp.Application.Tests.csproj ---
+
+--- START CONTENT: tests\MyCompanyApp.Domain.Tests\MyCompanyApp.Domain.Tests.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.5" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+  </ItemGroup>
+</Project>
+--- END CONTENT: tests\MyCompanyApp.Domain.Tests\MyCompanyApp.Domain.Tests.csproj ---
+
+--- START CONTENT: tests\MyCompanyApp.Infrastructure.Tests\MyCompanyApp.Infrastructure.Tests.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.5" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MyCompanyApp.Infrastructure\MyCompanyApp.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+--- END CONTENT: tests\MyCompanyApp.Infrastructure.Tests\MyCompanyApp.Infrastructure.Tests.csproj ---
+
+--- START CONTENT: tests\MyCompanyApp.Tests\MyCompanyApp.Tests.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="FluentAssertions" Version="8.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Domain\MyCompanyApp.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Application\MyCompanyApp.Application.csproj" />
+  </ItemGroup>
+</Project>
+--- END CONTENT: tests\MyCompanyApp.Tests\MyCompanyApp.Tests.csproj ---
+
+--- START CONTENT: tests\MyCompanyApp.Wpf.Tests\MyCompanyApp.Wpf.Tests.csproj ---
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.5" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+  </ItemGroup>
+</Project>
+--- END CONTENT: tests\MyCompanyApp.Wpf.Tests\MyCompanyApp.Wpf.Tests.csproj ---
+
+

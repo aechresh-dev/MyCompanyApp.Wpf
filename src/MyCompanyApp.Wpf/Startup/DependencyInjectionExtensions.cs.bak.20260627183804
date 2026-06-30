@@ -1,0 +1,18 @@
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using MyCompanyApp.Persistence;
+using MyCompanyApp.Platform.Core.Errors;
+
+namespace MyCompanyApp.Wpf.Startup;
+
+public static class DependencyInjectionExtensions
+{
+    public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddPersistence(configuration);
+        services.AddErrorHandling();
+        services.AddSingleton<MainWindow>();
+
+        return services;
+    }
+}

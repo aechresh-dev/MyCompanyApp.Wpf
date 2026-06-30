@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+    <ProjectReference Include="..\MyCompanyApp.Persistence\MyCompanyApp.Persistence.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Serilog.Extensions.Logging" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+    <RootNamespace>MyCompanyApp.Infrastructure</RootNamespace>
+    <AssemblyName>MyCompanyApp.Infrastructure</AssemblyName>
+    
+  </PropertyGroup>
+</Project>
+

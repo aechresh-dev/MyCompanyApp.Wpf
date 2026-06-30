@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="MyCompanyApp.Wpf.Presentation.Views.Dashboard.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="720"
+             d:DesignWidth="1280"
+             Background="#F5F7FA">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#1F2937">
+            <DockPanel LastChildFill="True">
+                <Border DockPanel.Dock="Top" Background="#111827" Padding="20">
+                    <StackPanel>
+                        <TextBlock Text="MyCompany" Foreground="White" FontSize="24" FontWeight="Bold"/>
+                        <TextBlock Text="Enterprise Shell" Foreground="#D1D5DB" FontSize="12" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <StackPanel Margin="12">
+                    <Border Background="#374151" CornerRadius="8" Padding="12" Margin="0,0,0,10">
+                        <TextBlock Text="Dashboard" Foreground="White" FontSize="15" FontWeight="SemiBold"/>
+                    </Border>
+
+                    <Border Background="#1F2937" BorderBrush="#374151" BorderThickness="1" CornerRadius="8" Padding="12" Margin="0,0,0,10">
+                        <TextBlock Text="Users Module (Role-based)" Foreground="#E5E7EB" FontSize="14"/>
+                    </Border>
+
+                    <Border Background="#1F2937" BorderBrush="#374151" BorderThickness="1" CornerRadius="8" Padding="12" Margin="0,0,0,10">
+                        <TextBlock Text="Leave Module (Role-based)" Foreground="#E5E7EB" FontSize="14"/>
+                    </Border>
+
+                    <Border Background="#1F2937" BorderBrush="#374151" BorderThickness="1" CornerRadius="8" Padding="12" Margin="0,0,0,10">
+                        <TextBlock Text="Reports / Settings" Foreground="#E5E7EB" FontSize="14"/>
+                    </Border>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Column="1" Margin="24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Background="White" CornerRadius="12" Padding="20" BorderBrush="#E5E7EB" BorderThickness="1">
+                <DockPanel>
+                    <StackPanel>
+                        <TextBlock Text="Dashboard Overview" FontSize="26" FontWeight="Bold" Foreground="#111827"/>
+                        <TextBlock Text="Phase 4 foundation: dashboard shell + navigation bootstrap" FontSize="13" Foreground="#6B7280" Margin="0,8,0,0"/>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <UniformGrid Grid.Row="2" Columns="3" Margin="0,0,0,0">
+                <Border Background="White" CornerRadius="12" Padding="20" Margin="0,0,12,0" BorderBrush="#E5E7EB" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="Users" FontSize="14" Foreground="#6B7280"/>
+                        <TextBlock Text="0" FontSize="36" FontWeight="Bold" Foreground="#111827" Margin="0,12,0,0"/>
+                        <TextBlock Text="Placeholder card for role-aware user metrics" Foreground="#9CA3AF" Margin="0,10,0,0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="12" Padding="20" Margin="0,0,12,0" BorderBrush="#E5E7EB" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="Leave Requests" FontSize="14" Foreground="#6B7280"/>
+                        <TextBlock Text="0" FontSize="36" FontWeight="Bold" Foreground="#111827" Margin="0,12,0,0"/>
+                        <TextBlock Text="Placeholder card for leave workflow summary" Foreground="#9CA3AF" Margin="0,10,0,0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="12" Padding="20" BorderBrush="#E5E7EB" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="System Health" FontSize="14" Foreground="#6B7280"/>
+                        <TextBlock Text="OK" FontSize="36" FontWeight="Bold" Foreground="#059669" Margin="0,12,0,0"/>
+                        <TextBlock Text="Placeholder card for platform/infrastructure health" Foreground="#9CA3AF" Margin="0,10,0,0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+        </Grid>
+    </Grid>
+</UserControl>

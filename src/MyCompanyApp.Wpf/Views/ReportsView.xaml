@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="MyCompanyApp.Wpf.Views.ReportsView"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+<Grid Background="#2A2A2A">
+    <TextBlock
+        Text="Reports Module"
+        FontSize="26"
+        Foreground="White"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"/>
+</Grid>
+
+</UserControl>

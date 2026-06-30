@@ -1,0 +1,46 @@
+# Build
+bin/
+obj/
+
+# Publish
+publish/
+Publish/
+
+# Installer
+InstallerPackage/
+runtime/
+
+# Backups
+.maintenance/
+.ai-analysis/
+backup/
+backups/
+*_backup/
+*_backups/
+DEPRECATED_BACKUPS/
+Audit-Output/
+
+# Large Files
+*.exe
+*.msi
+*.mya
+*.zip
+*.rar
+*.7z
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Rider
+.idea/
+
+# Resharper
+_ReSharper*/
+
+# Test
+TestResults/

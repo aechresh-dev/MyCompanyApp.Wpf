@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MyCompanyApp.Application\MyCompanyApp.Application.csproj" />
+    <ProjectReference Include="..\..\MyCompanyApp.Domain\MyCompanyApp.Domain.csproj" />
+    <ProjectReference Include="..\..\MyCompanyApp.Persistence\MyCompanyApp.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using MyCompanyApp.Wpf.Startup;
+using System;
+using System.Threading.Tasks;
+using System.Windows;
+
+namespace MyCompanyApp.Wpf;
+
+public partial class App : System.Windows.Application
+{
+    private IHost? _host;
+
+    protected override async void OnStartup(StartupEventArgs e)
+    {
+        base.OnStartup(e);
+
+        Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+        AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+        TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
+
+        _host = Host.CreateDefaultBuilder()
+            .ConfigureServices((context, services) => { services.AddApplicationServices(); })
+            .ConfigureLogging(logging => { logging.ClearProviders(); logging.AddDebug(); })
+            .Build();
+
+        await _host.StartAsync();
+        var mainWindow = _host.Services.GetRequiredService<MainWindow>();
+        MainWindow = mainWindow;
+        mainWindow.Show();
+    }
+
+    private void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+    {
+        // استفاده از Environment.NewLine به جای کاراکترهای خاص پاورشل
+        string errorMsg = "خطای پیش‌بینی‌نشده در رابط کاربری رخ داد." + Environment.NewLine + Environment.NewLine + e.Exception.Message;
+        MessageBox.Show(errorMsg, "Application Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        e.Handled = true;
+    }
+
+    private void CurrentDomain_UnhandledException(object? sender, UnhandledExceptionEventArgs e) { }
+    private void TaskScheduler_UnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e) { e.SetObserved(); }
+
+    protected override async void OnExit(ExitEventArgs e)
+    {
+        if (_host is not null) { await _host.StopAsync(); _host.Dispose(); }
+        base.OnExit(e);
+    }
+}
