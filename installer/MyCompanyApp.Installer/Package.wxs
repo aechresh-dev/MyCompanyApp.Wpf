@@ -2,27 +2,76 @@
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 
-  <Package
-      Name="MyCompanyApp"
-      Manufacturer="MyCompany"
-      Version="1.0.0"
-      UpgradeCode="2F9C1A0A-8C0A-4E34-8C0F-111111111111"
-      Language="1033"
-      InstallerVersion="500"
-      Compressed="yes"
-      Scope="perMachine">
+<Package
+Name="MyCompanyApp"
+Manufacturer="MyCompany"
+Version="1.0.0"
+UpgradeCode="2F9C1A0A-8C0A-4E34-8C0F-111111111111"
+Language="1033"
+InstallerVersion="500"
+Compressed="yes"
+Scope="perMachine">
 
-    <MajorUpgrade DowngradeErrorMessage="A newer version is already installed." />
-    <MediaTemplate />
+<MajorUpgrade DowngradeErrorMessage="A newer version is already installed."/>
+<MediaTemplate/>
 
-    <StandardDirectory Id="ProgramFiles64Folder">
-      <Directory Id="INSTALLFOLDER" Name="MyCompanyApp" />
-    </StandardDirectory>
+<StandardDirectory Id="ProgramFiles64Folder">
+<Directory Id="INSTALLFOLDER" Name="MyCompanyApp"/>
+</StandardDirectory>
 
-    <Feature Id="MainFeature" Title="MyCompanyApp" Level="1">
-      <ComponentGroupRef Id="HarvestedComponents" />
-    </Feature>
+<StandardDirectory Id="ProgramMenuFolder">
+<Directory Id="ApplicationProgramsFolder" Name="MyCompanyApp"/>
+</StandardDirectory>
 
-  </Package>
+<ComponentGroup Id="ApplicationShortcuts">
+
+<Component Id="DesktopShortcutComponent" Guid="*">
+
+<Shortcut
+Id="DesktopShortcut"
+Directory="DesktopFolder"
+Name="MyCompanyApp"
+Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
+WorkingDirectory="INSTALLFOLDER"/>
+
+<RegistryValue
+Root="HKCU"
+Key="Software\MyCompanyApp"
+Name="DesktopShortcut"
+Type="integer"
+Value="1"
+KeyPath="yes"/>
+
+</Component>
+
+<Component Id="StartMenuShortcutComponent" Guid="*">
+
+<Shortcut
+Id="StartMenuShortcut"
+Directory="ApplicationProgramsFolder"
+Name="MyCompanyApp"
+Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
+WorkingDirectory="INSTALLFOLDER"/>
+
+<RegistryValue
+Root="HKCU"
+Key="Software\MyCompanyApp"
+Name="StartMenuShortcut"
+Type="integer"
+Value="1"
+KeyPath="yes"/>
+
+</Component>
+
+</ComponentGroup>
+
+<Feature Id="MainFeature" Title="MyCompanyApp" Level="1">
+
+<ComponentGroupRef Id="HarvestedComponents"/>
+<ComponentGroupRef Id="ApplicationShortcuts"/>
+
+</Feature>
+
+</Package>
 
 </Wix>

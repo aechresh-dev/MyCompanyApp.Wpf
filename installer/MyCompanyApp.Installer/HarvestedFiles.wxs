@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+  <Fragment>
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="CMP_0001" Guid="*" Bitness="always64">
+        <File Id="FIL_0001" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\appsettings.Development.json" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0002" Guid="*" Bitness="always64">
+        <File Id="FIL_0002" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\appsettings.json" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0003" Guid="*" Bitness="always64">
+        <File Id="FIL_0003" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\BCrypt.Net-Next.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0004" Guid="*" Bitness="always64">
+        <File Id="FIL_0004" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\CommunityToolkit.Mvvm.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0005" Guid="*" Bitness="always64">
+        <File Id="FIL_0005" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\e_sqlite3.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0006" Guid="*" Bitness="always64">
+        <File Id="FIL_0006" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Authentication.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0007" Guid="*" Bitness="always64">
+        <File Id="FIL_0007" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Authentication.Cookies.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0008" Guid="*" Bitness="always64">
+        <File Id="FIL_0008" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Authentication.Core.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0009" Guid="*" Bitness="always64">
+        <File Id="FIL_0009" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Authentication.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0010" Guid="*" Bitness="always64">
+        <File Id="FIL_0010" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Cryptography.Internal.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0011" Guid="*" Bitness="always64">
+        <File Id="FIL_0011" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0012" Guid="*" Bitness="always64">
+        <File Id="FIL_0012" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.DataProtection.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0013" Guid="*" Bitness="always64">
+        <File Id="FIL_0013" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.DataProtection.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0014" Guid="*" Bitness="always64">
+        <File Id="FIL_0014" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Hosting.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0015" Guid="*" Bitness="always64">
+        <File Id="FIL_0015" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0016" Guid="*" Bitness="always64">
+        <File Id="FIL_0016" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Http.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0017" Guid="*" Bitness="always64">
+        <File Id="FIL_0017" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Http.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0018" Guid="*" Bitness="always64">
+        <File Id="FIL_0018" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Http.Extensions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0019" Guid="*" Bitness="always64">
+        <File Id="FIL_0019" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Http.Features.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0020" Guid="*" Bitness="always64">
+        <File Id="FIL_0020" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.Identity.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0021" Guid="*" Bitness="always64">
+        <File Id="FIL_0021" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.AspNetCore.WebUtilities.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0022" Guid="*" Bitness="always64">
+        <File Id="FIL_0022" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Data.Sqlite.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0023" Guid="*" Bitness="always64">
+        <File Id="FIL_0023" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.EntityFrameworkCore.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0024" Guid="*" Bitness="always64">
+        <File Id="FIL_0024" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.EntityFrameworkCore.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0025" Guid="*" Bitness="always64">
+        <File Id="FIL_0025" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.EntityFrameworkCore.InMemory.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0026" Guid="*" Bitness="always64">
+        <File Id="FIL_0026" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.EntityFrameworkCore.Relational.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0027" Guid="*" Bitness="always64">
+        <File Id="FIL_0027" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.EntityFrameworkCore.Sqlite.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0028" Guid="*" Bitness="always64">
+        <File Id="FIL_0028" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Caching.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0029" Guid="*" Bitness="always64">
+        <File Id="FIL_0029" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Caching.Memory.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0030" Guid="*" Bitness="always64">
+        <File Id="FIL_0030" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0031" Guid="*" Bitness="always64">
+        <File Id="FIL_0031" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.Binder.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0032" Guid="*" Bitness="always64">
+        <File Id="FIL_0032" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.CommandLine.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0033" Guid="*" Bitness="always64">
+        <File Id="FIL_0033" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0034" Guid="*" Bitness="always64">
+        <File Id="FIL_0034" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0035" Guid="*" Bitness="always64">
+        <File Id="FIL_0035" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.FileExtensions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0036" Guid="*" Bitness="always64">
+        <File Id="FIL_0036" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.Json.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0037" Guid="*" Bitness="always64">
+        <File Id="FIL_0037" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Configuration.UserSecrets.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0038" Guid="*" Bitness="always64">
+        <File Id="FIL_0038" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0039" Guid="*" Bitness="always64">
+        <File Id="FIL_0039" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.DependencyInjection.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0040" Guid="*" Bitness="always64">
+        <File Id="FIL_0040" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.DependencyModel.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0041" Guid="*" Bitness="always64">
+        <File Id="FIL_0041" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Diagnostics.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0042" Guid="*" Bitness="always64">
+        <File Id="FIL_0042" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Diagnostics.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0043" Guid="*" Bitness="always64">
+        <File Id="FIL_0043" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.FileProviders.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0044" Guid="*" Bitness="always64">
+        <File Id="FIL_0044" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.FileProviders.Physical.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0045" Guid="*" Bitness="always64">
+        <File Id="FIL_0045" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.FileSystemGlobbing.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0046" Guid="*" Bitness="always64">
+        <File Id="FIL_0046" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Hosting.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0047" Guid="*" Bitness="always64">
+        <File Id="FIL_0047" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Hosting.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0048" Guid="*" Bitness="always64">
+        <File Id="FIL_0048" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Identity.Core.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0049" Guid="*" Bitness="always64">
+        <File Id="FIL_0049" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0050" Guid="*" Bitness="always64">
+        <File Id="FIL_0050" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.Configuration.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0051" Guid="*" Bitness="always64">
+        <File Id="FIL_0051" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.Console.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0052" Guid="*" Bitness="always64">
+        <File Id="FIL_0052" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.Debug.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0053" Guid="*" Bitness="always64">
+        <File Id="FIL_0053" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0054" Guid="*" Bitness="always64">
+        <File Id="FIL_0054" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.EventLog.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0055" Guid="*" Bitness="always64">
+        <File Id="FIL_0055" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Logging.EventSource.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0056" Guid="*" Bitness="always64">
+        <File Id="FIL_0056" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.ObjectPool.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0057" Guid="*" Bitness="always64">
+        <File Id="FIL_0057" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Options.ConfigurationExtensions.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0058" Guid="*" Bitness="always64">
+        <File Id="FIL_0058" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Options.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0059" Guid="*" Bitness="always64">
+        <File Id="FIL_0059" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.Primitives.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0060" Guid="*" Bitness="always64">
+        <File Id="FIL_0060" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Extensions.WebEncoders.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0061" Guid="*" Bitness="always64">
+        <File Id="FIL_0061" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Microsoft.Net.Http.Headers.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0062" Guid="*" Bitness="always64">
+        <File Id="FIL_0062" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Application.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0063" Guid="*" Bitness="always64">
+        <File Id="FIL_0063" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Application.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0064" Guid="*" Bitness="always64">
+        <File Id="FIL_0064" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Domain.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0065" Guid="*" Bitness="always64">
+        <File Id="FIL_0065" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Domain.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0066" Guid="*" Bitness="always64">
+        <File Id="FIL_0066" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Infrastructure.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0067" Guid="*" Bitness="always64">
+        <File Id="FIL_0067" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Infrastructure.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0068" Guid="*" Bitness="always64">
+        <File Id="FIL_0068" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Modules.Dashboard.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0069" Guid="*" Bitness="always64">
+        <File Id="FIL_0069" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Modules.Dashboard.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0070" Guid="*" Bitness="always64">
+        <File Id="FIL_0070" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Modules.Leave.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0071" Guid="*" Bitness="always64">
+        <File Id="FIL_0071" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Modules.Leave.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0072" Guid="*" Bitness="always64">
+        <File Id="FIL_0072" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Modules.Users.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0073" Guid="*" Bitness="always64">
+        <File Id="FIL_0073" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Modules.Users.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0074" Guid="*" Bitness="always64">
+        <File Id="FIL_0074" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Persistence.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0075" Guid="*" Bitness="always64">
+        <File Id="FIL_0075" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Persistence.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0076" Guid="*" Bitness="always64">
+        <File Id="FIL_0076" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Platform.Auth.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0077" Guid="*" Bitness="always64">
+        <File Id="FIL_0077" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Platform.Auth.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0078" Guid="*" Bitness="always64">
+        <File Id="FIL_0078" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Platform.Core.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0079" Guid="*" Bitness="always64">
+        <File Id="FIL_0079" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Platform.Core.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0080" Guid="*" Bitness="always64">
+        <File Id="FIL_0080" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Platform.UI.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0081" Guid="*" Bitness="always64">
+        <File Id="FIL_0081" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Platform.UI.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0082" Guid="*" Bitness="always64">
+        <File Id="FIL_0082" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Wpf.deps.json" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0083" Guid="*" Bitness="always64">
+        <File Id="FIL_0083" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Wpf.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0084" Guid="*" Bitness="always64">
+        <File Id="FIL_0084" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Wpf.exe" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0085" Guid="*" Bitness="always64">
+        <File Id="FIL_0085" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Wpf.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0086" Guid="*" Bitness="always64">
+        <File Id="FIL_0086" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\MyCompanyApp.Wpf.runtimeconfig.json" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0087" Guid="*" Bitness="always64">
+        <File Id="FIL_0087" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0088" Guid="*" Bitness="always64">
+        <File Id="FIL_0088" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Enrichers.Environment.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0089" Guid="*" Bitness="always64">
+        <File Id="FIL_0089" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Enrichers.Thread.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0090" Guid="*" Bitness="always64">
+        <File Id="FIL_0090" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Extensions.Hosting.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0091" Guid="*" Bitness="always64">
+        <File Id="FIL_0091" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Extensions.Logging.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0092" Guid="*" Bitness="always64">
+        <File Id="FIL_0092" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Settings.Configuration.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0093" Guid="*" Bitness="always64">
+        <File Id="FIL_0093" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Sinks.Console.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0094" Guid="*" Bitness="always64">
+        <File Id="FIL_0094" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Sinks.Debug.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0095" Guid="*" Bitness="always64">
+        <File Id="FIL_0095" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\Serilog.Sinks.File.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0096" Guid="*" Bitness="always64">
+        <File Id="FIL_0096" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\SQLitePCLRaw.batteries_v2.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0097" Guid="*" Bitness="always64">
+        <File Id="FIL_0097" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\SQLitePCLRaw.core.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0098" Guid="*" Bitness="always64">
+        <File Id="FIL_0098" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\SQLitePCLRaw.provider.e_sqlite3.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0099" Guid="*" Bitness="always64">
+        <File Id="FIL_0099" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Diagnostics.DiagnosticSource.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0100" Guid="*" Bitness="always64">
+        <File Id="FIL_0100" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Diagnostics.EventLog.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0101" Guid="*" Bitness="always64">
+        <File Id="FIL_0101" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Diagnostics.EventLog.Messages.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0102" Guid="*" Bitness="always64">
+        <File Id="FIL_0102" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.IO.Pipelines.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0103" Guid="*" Bitness="always64">
+        <File Id="FIL_0103" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Security.Cryptography.Pkcs.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0104" Guid="*" Bitness="always64">
+        <File Id="FIL_0104" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Security.Cryptography.Xml.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0105" Guid="*" Bitness="always64">
+        <File Id="FIL_0105" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Text.Encodings.Web.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="CMP_0106" Guid="*" Bitness="always64">
+        <File Id="FIL_0106" Source="G:\Projects\Computer\MyProjects\MyCompanyApp.Wpf\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\win-x64\publish\System.Text.Json.dll" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="HarvestedComponents">
+      <ComponentRef Id="CMP_0001" />
+      <ComponentRef Id="CMP_0002" />
+      <ComponentRef Id="CMP_0003" />
+      <ComponentRef Id="CMP_0004" />
+      <ComponentRef Id="CMP_0005" />
+      <ComponentRef Id="CMP_0006" />
+      <ComponentRef Id="CMP_0007" />
+      <ComponentRef Id="CMP_0008" />
+      <ComponentRef Id="CMP_0009" />
+      <ComponentRef Id="CMP_0010" />
+      <ComponentRef Id="CMP_0011" />
+      <ComponentRef Id="CMP_0012" />
+      <ComponentRef Id="CMP_0013" />
+      <ComponentRef Id="CMP_0014" />
+      <ComponentRef Id="CMP_0015" />
+      <ComponentRef Id="CMP_0016" />
+      <ComponentRef Id="CMP_0017" />
+      <ComponentRef Id="CMP_0018" />
+      <ComponentRef Id="CMP_0019" />
+      <ComponentRef Id="CMP_0020" />
+      <ComponentRef Id="CMP_0021" />
+      <ComponentRef Id="CMP_0022" />
+      <ComponentRef Id="CMP_0023" />
+      <ComponentRef Id="CMP_0024" />
+      <ComponentRef Id="CMP_0025" />
+      <ComponentRef Id="CMP_0026" />
+      <ComponentRef Id="CMP_0027" />
+      <ComponentRef Id="CMP_0028" />
+      <ComponentRef Id="CMP_0029" />
+      <ComponentRef Id="CMP_0030" />
+      <ComponentRef Id="CMP_0031" />
+      <ComponentRef Id="CMP_0032" />
+      <ComponentRef Id="CMP_0033" />
+      <ComponentRef Id="CMP_0034" />
+      <ComponentRef Id="CMP_0035" />
+      <ComponentRef Id="CMP_0036" />
+      <ComponentRef Id="CMP_0037" />
+      <ComponentRef Id="CMP_0038" />
+      <ComponentRef Id="CMP_0039" />
+      <ComponentRef Id="CMP_0040" />
+      <ComponentRef Id="CMP_0041" />
+      <ComponentRef Id="CMP_0042" />
+      <ComponentRef Id="CMP_0043" />
+      <ComponentRef Id="CMP_0044" />
+      <ComponentRef Id="CMP_0045" />
+      <ComponentRef Id="CMP_0046" />
+      <ComponentRef Id="CMP_0047" />
+      <ComponentRef Id="CMP_0048" />
+      <ComponentRef Id="CMP_0049" />
+      <ComponentRef Id="CMP_0050" />
+      <ComponentRef Id="CMP_0051" />
+      <ComponentRef Id="CMP_0052" />
+      <ComponentRef Id="CMP_0053" />
+      <ComponentRef Id="CMP_0054" />
+      <ComponentRef Id="CMP_0055" />
+      <ComponentRef Id="CMP_0056" />
+      <ComponentRef Id="CMP_0057" />
+      <ComponentRef Id="CMP_0058" />
+      <ComponentRef Id="CMP_0059" />
+      <ComponentRef Id="CMP_0060" />
+      <ComponentRef Id="CMP_0061" />
+      <ComponentRef Id="CMP_0062" />
+      <ComponentRef Id="CMP_0063" />
+      <ComponentRef Id="CMP_0064" />
+      <ComponentRef Id="CMP_0065" />
+      <ComponentRef Id="CMP_0066" />
+      <ComponentRef Id="CMP_0067" />
+      <ComponentRef Id="CMP_0068" />
+      <ComponentRef Id="CMP_0069" />
+      <ComponentRef Id="CMP_0070" />
+      <ComponentRef Id="CMP_0071" />
+      <ComponentRef Id="CMP_0072" />
+      <ComponentRef Id="CMP_0073" />
+      <ComponentRef Id="CMP_0074" />
+      <ComponentRef Id="CMP_0075" />
+      <ComponentRef Id="CMP_0076" />
+      <ComponentRef Id="CMP_0077" />
+      <ComponentRef Id="CMP_0078" />
+      <ComponentRef Id="CMP_0079" />
+      <ComponentRef Id="CMP_0080" />
+      <ComponentRef Id="CMP_0081" />
+      <ComponentRef Id="CMP_0082" />
+      <ComponentRef Id="CMP_0083" />
+      <ComponentRef Id="CMP_0084" />
+      <ComponentRef Id="CMP_0085" />
+      <ComponentRef Id="CMP_0086" />
+      <ComponentRef Id="CMP_0087" />
+      <ComponentRef Id="CMP_0088" />
+      <ComponentRef Id="CMP_0089" />
+      <ComponentRef Id="CMP_0090" />
+      <ComponentRef Id="CMP_0091" />
+      <ComponentRef Id="CMP_0092" />
+      <ComponentRef Id="CMP_0093" />
+      <ComponentRef Id="CMP_0094" />
+      <ComponentRef Id="CMP_0095" />
+      <ComponentRef Id="CMP_0096" />
+      <ComponentRef Id="CMP_0097" />
+      <ComponentRef Id="CMP_0098" />
+      <ComponentRef Id="CMP_0099" />
+      <ComponentRef Id="CMP_0100" />
+      <ComponentRef Id="CMP_0101" />
+      <ComponentRef Id="CMP_0102" />
+      <ComponentRef Id="CMP_0103" />
+      <ComponentRef Id="CMP_0104" />
+      <ComponentRef Id="CMP_0105" />
+      <ComponentRef Id="CMP_0106" />
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>
+
