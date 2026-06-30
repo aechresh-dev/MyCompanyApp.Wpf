@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+  <Package
+      Name="MyCompanyApp"
+      Manufacturer="MyCompany"
+      Version="1.0.0"
+      UpgradeCode="12345678-1234-1234-1234-123456789ABC">
+
+    <MediaTemplate />
+
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="MyCompanyApp" />
+    </StandardDirectory>
+
+    <Feature Id="MainFeature" Title="MyCompanyApp" Level="1">
+      <ComponentGroupRef Id="ProductComponents"/>
+    </Feature>
+
+  </Package>
+
+  <Fragment>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+
+      <Component Guid="*">
+
+        <File
+            Source="..\..\src\MyCompanyApp.Wpf\bin\Release\net8.0-windows\publish\MyCompanyApp.Wpf.exe" />
+
+      </Component>
+
+    </ComponentGroup>
+
+  </Fragment>
+
+</Wix>
