@@ -1,80 +1,97 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 
-<Package
-Name="MyCompanyApp"
-Manufacturer="MyCompany"
-Version="1.0.0"
-UpgradeCode="2F9C1A0A-8C0A-4E34-8C0F-111111111111"
-Language="1033"
-InstallerVersion="500"
-Compressed="yes"
-Scope="perMachine">
+  <Package
+    Name="MyCompanyApp"
+    Manufacturer="MyCompany"
+    Version="1.0.0"
+    UpgradeCode="2F9C1A0A-8C0A-4E34-8C0F-111111111111"
+    Language="1033"
+    InstallerVersion="500"
+    Compressed="yes"
+    Scope="perMachine">
 
-<MajorUpgrade DowngradeErrorMessage="A newer version is already installed."/>
-<MediaTemplate/>
+    <SummaryInformation
+      Description="MyCompanyApp Installer"
+      Manufacturer="MyCompany"
+      Keywords="Installer;WPF;MyCompanyApp"
+      Subject="MyCompanyApp"
+      Title="MyCompanyApp Setup" />
 
-<StandardDirectory Id="ProgramFiles64Folder">
-<Directory Id="INSTALLFOLDER" Name="MyCompanyApp"/>
-</StandardDirectory>
+    <MajorUpgrade DowngradeErrorMessage="A newer version of MyCompanyApp is already installed." />
 
-<StandardDirectory Id="ProgramMenuFolder">
-<Directory Id="ApplicationProgramsFolder" Name="MyCompanyApp"/>
-</StandardDirectory>
+    <MediaTemplate />
 
-<ComponentGroup Id="ApplicationShortcuts">
+    <!-- ARP / Programs and Features metadata -->
+    <Property Id="ARPPRODUCTICON" Value="AppIcon.ico" />
+    <Property Id="ARPCOMMENTS" Value="MyCompanyApp - professional WPF application." />
+    <Property Id="ARPHELPLINK" Value="https://github.com/aechresh-dev/MyCompanyApp.Wpf" />
+    <Property Id="ARPURLINFOABOUT" Value="https://github.com/aechresh-dev/MyCompanyApp.Wpf" />
+    <Property Id="ARPNOREPAIR" Value="yes" />
+    <Property Id="ARPNOMODIFY" Value="yes" />
 
-<Component Id="DesktopShortcutComponent" Guid="*" Directory="DesktopFolder">
+    <!-- Optional launch-after-install -->
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch MyCompanyApp" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX" Value="1" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXSTATE" Value="1" />
 
-<Shortcut
-Id="DesktopShortcut"
-Name="MyCompanyApp"
-Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
-WorkingDirectory="INSTALLFOLDER"/>
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="MyCompanyApp" />
+    </StandardDirectory>
 
-<RegistryValue
-Root="HKCU"
-Key="Software\MyCompanyApp"
-Name="DesktopShortcut"
-Type="integer"
-Value="1"
-KeyPath="yes"/>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ApplicationProgramsFolder" Name="MyCompanyApp" />
+    </StandardDirectory>
 
-</Component>
+    <StandardDirectory Id="DesktopFolder" />
 
-<Component Id="StartMenuShortcutComponent" Guid="*" Directory="ApplicationProgramsFolder">
+    <Feature Id="MainFeature" Title="MyCompanyApp" Level="1">
+      <ComponentGroupRef Id="HarvestedComponents" />
+      <ComponentGroupRef Id="ApplicationShortcuts" />
+    </Feature>
 
-<Shortcut
-Id="StartMenuShortcut"
-Name="MyCompanyApp"
-Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
-WorkingDirectory="INSTALLFOLDER"/>
+    <ComponentGroup Id="ApplicationShortcuts">
 
-<RemoveFolder
-Id="RemoveAppProgramsFolder"
-Directory="ApplicationProgramsFolder"
-On="uninstall"/>
+      <Component Id="DesktopShortcutComponent" Guid="*" Directory="DesktopFolder">
+        <Shortcut
+          Id="DesktopShortcut"
+          Name="MyCompanyApp"
+          Description="Launch MyCompanyApp"
+          Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
+          WorkingDirectory="INSTALLFOLDER"
+          Icon="AppIcon.ico" />
+        <RegistryValue
+          Root="HKCU"
+          Key="Software\MyCompanyApp"
+          Name="DesktopShortcut"
+          Type="integer"
+          Value="1"
+          KeyPath="yes" />
+      </Component>
 
-<RegistryValue
-Root="HKCU"
-Key="Software\MyCompanyApp"
-Name="StartMenuShortcut"
-Type="integer"
-Value="1"
-KeyPath="yes"/>
+      <Component Id="StartMenuShortcutComponent" Guid="*" Directory="ApplicationProgramsFolder">
+        <Shortcut
+          Id="StartMenuShortcut"
+          Name="MyCompanyApp"
+          Description="Launch MyCompanyApp"
+          Target="[INSTALLFOLDER]MyCompanyApp.Wpf.exe"
+          WorkingDirectory="INSTALLFOLDER"
+          Icon="AppIcon.ico" />
+        <RemoveFolder
+          Id="RemoveAppProgramsFolder"
+          Directory="ApplicationProgramsFolder"
+          On="uninstall" />
+        <RegistryValue
+          Root="HKCU"
+          Key="Software\MyCompanyApp"
+          Name="StartMenuShortcut"
+          Type="integer"
+          Value="1"
+          KeyPath="yes" />
+      </Component>
 
-</Component>
+    </ComponentGroup>
 
-</ComponentGroup>
-
-<Feature Id="MainFeature" Title="MyCompanyApp" Level="1">
-
-<ComponentGroupRef Id="HarvestedComponents"/>
-<ComponentGroupRef Id="ApplicationShortcuts"/>
-
-</Feature>
-
-</Package>
+  </Package>
 
 </Wix>
