@@ -14,9 +14,7 @@
     <SummaryInformation
       Description="MyCompanyApp Installer"
       Manufacturer="MyCompany"
-      Keywords="Installer;WPF;MyCompanyApp"
-      Subject="MyCompanyApp"
-      Title="MyCompanyApp Setup" />
+      Keywords="Installer;WPF;MyCompanyApp" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of MyCompanyApp is already installed." />
 
