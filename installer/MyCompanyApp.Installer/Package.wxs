@@ -20,6 +20,9 @@
 
     <MediaTemplate />
 
+    <!-- Define the Icon element so that shortcuts and ARP can reference it -->
+    <Icon Id="AppIcon.ico" SourceFile="AppIcon.ico" />
+
     <!-- ARP / Programs and Features metadata -->
     <Property Id="ARPPRODUCTICON" Value="AppIcon.ico" />
     <Property Id="ARPCOMMENTS" Value="MyCompanyApp - professional WPF application." />
